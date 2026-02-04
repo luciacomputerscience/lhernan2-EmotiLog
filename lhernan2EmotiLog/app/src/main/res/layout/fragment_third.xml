@@ -7,11 +7,12 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/header_text_first_fragment"
+        android:id="@+id/summary_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/picker_text"
+        android:paddingBottom="30dp"
+        android:text="@string/daily_emotion_summary"
         android:textAlignment="center"
         android:textColor="#5B2C8A"
         android:textSize="35dp"
@@ -20,35 +21,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ListView
-        android:id="@+id/emotion_list_view"
+    <LinearLayout
+        android:id="@+id/summary_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/log_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/summary_title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header_text_first_fragment" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/log_btn"
+        android:id="@+id/back_btn_summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/log"
+        android:text="@string/back"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/summary_btn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emotion_list_view" />
-
-    <Button
-        android:id="@+id/summary_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/summary"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/log_btn"
-        app:layout_constraintTop_toBottomOf="@id/emotion_list_view" />
+        app:layout_constraintStart_toStartOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

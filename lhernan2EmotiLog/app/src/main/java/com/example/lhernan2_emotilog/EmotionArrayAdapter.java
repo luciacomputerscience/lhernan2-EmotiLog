@@ -21,7 +21,7 @@ public class EmotionArrayAdapter extends ArrayAdapter<Emotion> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View view;
         if (convertView == null) {
-            view = LayoutInflater.from(getContext()).inflate(R.layout.content_main, parent, false);
+            view = LayoutInflater.from(getContext()).inflate(R.layout.emoti_btn, parent, false);
         } else {
             view = convertView;
         }
