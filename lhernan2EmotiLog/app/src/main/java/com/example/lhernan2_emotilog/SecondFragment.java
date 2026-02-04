@@ -13,6 +13,11 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import java.util.ArrayList;
 
+/*
+* Displays a log of when an emotion was selected
+* In the future, I would like to make this in reverse-chronological order
+* */
+
 public class SecondFragment extends Fragment {
 
     private EmotionViewModel viewModel;
@@ -33,6 +38,11 @@ public class SecondFragment extends Fragment {
         adapter = new LogArrayAdapter(requireContext(), new ArrayList<>());
         list.setAdapter(adapter);
 
+        // Refresh the logs when they change
+        /* Code based off of
+        * Android Docs
+        * https://stackoverflow.com/questions/3669325/notifydatasetchanged-example
+        */
         viewModel.getLogs().observe(getViewLifecycleOwner(), logs -> {
             adapter.clear();
             adapter.addAll(logs);
@@ -44,6 +54,7 @@ public class SecondFragment extends Fragment {
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        // Back button to return to the emotion picker
         view.findViewById(R.id.back_btn_log).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

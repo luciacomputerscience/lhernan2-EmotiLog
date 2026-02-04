@@ -12,6 +12,10 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
+
+/* Tied to the emoti_btn
+* Helps create appealing custom listView items in the emoji picker*/
+
 public class EmotionArrayAdapter extends ArrayAdapter<Emotion> {
     public EmotionArrayAdapter(Context context, ArrayList<Emotion> emotions) {
         super(context, 0, emotions);  // 0 is a placeholder since we override getView(), parent doesn't need to know the actual layout
@@ -25,6 +29,8 @@ public class EmotionArrayAdapter extends ArrayAdapter<Emotion> {
         } else {
             view = convertView;
         }
+
+        // Get the emoji user picked and edit the emoti_btn accordingly
         Emotion emotion = getItem(position);
         TextView emojiDescription = view.findViewById(R.id.emoji_description);
         TextView emojiPicture = view.findViewById(R.id.emoji);

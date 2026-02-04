@@ -12,6 +12,10 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
+/*
+* A slightly different format than the EmotionArrayAdapter's UI was needed so I made a separate
+* adapter. This one includes a place for the timestamp
+* */
 public class LogArrayAdapter extends ArrayAdapter<EmotionLog> {
     public LogArrayAdapter(@NonNull Context context, @NonNull ArrayList<EmotionLog> logs) {
         super(context, 0, logs);

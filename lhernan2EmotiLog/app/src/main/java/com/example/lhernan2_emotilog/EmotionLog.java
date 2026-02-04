@@ -1,5 +1,8 @@
 package com.example.lhernan2_emotilog;
 
+/*
+* The EmotionLog objects store an emotion and the time it was selected
+*/
 public class EmotionLog {
     private Emotion emotion;
     private String timestamp;

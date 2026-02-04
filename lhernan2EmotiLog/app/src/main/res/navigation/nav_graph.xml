@@ -40,3 +40,6 @@
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
+
+<!-- Referenced this article for how to code the nav-graph-->
+<!--    https://medium.com/@zorbeytorunoglu/fragment-navigation-on-android-c45488184399-->
